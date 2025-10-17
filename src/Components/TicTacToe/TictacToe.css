@@ -1,117 +1,101 @@
+/* Full container for game */
 .container {
-    text-align: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-/* Title styling */
+/* Game title */
 .title {
-    margin-top: 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    flex-wrap: wrap;
+  margin: 10px 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vmin;
+  flex-wrap: wrap;
 }
 
 .title span {
-    color: green;
-    padding-left: 15px;
+  color: green;
+  padding-left: 15px;
 }
 
 .title img {
-    padding: 0 20px;
-    height: 50px;
+  padding: 0 20px;
+  height: 50px;
 }
 
-/* Reset button styling */
+/* Reset button */
 .reset {
-    width: 180px;
-    height: 80px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: lavender;
-    font-size: 30px;
-    color: brown;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    border-radius: 50px;
-    transition: background-color 0.3s;
+  width: 25vmin;
+  height: 10vmin;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: lavender;
+  font-size: 4vmin;
+  color: brown;
+  margin-top: 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
 }
 
 .reset:hover {
-    background-color: #e6e6fa;
+  background-color: #e6e6fa;
 }
 
-/* Board setup */
+/* Board layout */
 .board {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: fit-content;
-    margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+  margin-top: 2vmin;
 }
 
-/* Each row in the board */
+/* Each row of the board */
 .row1,
 .row2,
 .row3 {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 1vmin;
 }
 
-/* Each box */
+/* Each game box */
 .boxes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 180px;
-    width: 180px;
-    background-color: gray;
-    border: 4px solid #242424;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.2s, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vmin;
+  width: 20vmin;
+  background-color: gray;
+  border: 4px solid #242424;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.2s, transform 0.1s;
+  font-size: 10vmin;
+  font-weight: bold;
+  color: white;
 }
 
 .boxes:hover {
-    background-color: #4f4f4f;
-    transform: scale(1.02);
+  background-color: #4f4f4f;
+  transform: scale(1.02);
 }
 
-/* X or O image */
+/* Image inside box (X or O) */
 .boxes img {
-    width: 80px;
-    height: 80px;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .title {
-        font-size: 36px;
-    }
-
-    .boxes {
-        height: 100px;
-        width: 100px;
-    }
-
-    .boxes img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .reset {
-        width: 140px;
-        height: 60px;
-        font-size: 24px;
-    }
-}
+/* Optional: Text O instead of image */
 .o-letter {
-  font-size: 110px;
+  font-size: 10vmin;
   font-weight: bold;
-  color: rgb(228, 228, 228);
+  color: white;
 }
-
